@@ -26,9 +26,9 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    this.getRecipes();
-  }
+  // componentDidMount() {
+  //   this.getRecipes();
+  // }
   displayPage = index => {
     switch (index) {
       default:

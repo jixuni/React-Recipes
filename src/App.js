@@ -9,32 +9,33 @@ class App extends Component {
     recipes: recipes,
     url: `https://www.food2fork.com/api/search?key=${
       process.env.REACT_APP_RECIPE_KEY
-    }`
+    }`,
+    details_id: 35386
   };
 
-  async getRecipes() {
-    try {
-      const data = await fetch(this.state.url);
-      const jsonData = await data.json();
-      this.setState({
-        recipes: jsonData.recipes
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async getRecipes() {
+  //   try {
+  //     const data = await fetch(this.state.url);
+  //     const jsonData = await data.json();
+  //     this.setState({
+  //       recipes: jsonData.recipes
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
-  componentDidMount() {
-    this.getRecipes();
-  }
+  // componentDidMount() {
+  //   this.getRecipes();
+  // }
 
   render() {
     // console.log(this.state.recipes);
-    console.log(process.env.REACT_APP_RECIPE_KEY);
+
     return (
       <React.Fragment>
-        <RecipeList recipes={this.state.recipes} />
-        <RecipeDetail />
+        {/* <RecipeList recipes={this.state.recipes} /> */}
+        <RecipeDetail id={this.state.details_id} />
       </React.Fragment>
     );
   }

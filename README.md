@@ -2,7 +2,7 @@
 
 [Deploy page](https://jixuni.github.io/React-Recipes/)
 
-Recipes is a simple component base App that grabs recipes from a Api and display that most popular ones on the page.
+Recipes is a simple component base App that grabs recipes from a Api and display the most popular recipes on the page.
 
 ### Installing
 

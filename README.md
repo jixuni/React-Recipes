@@ -1,4 +1,4 @@
-# Recipes
+# React-Recipes
 
 ![ScreenShot](https://github.com/jixuni/React-Recipes/blob/master/images/screenshot.png)
 

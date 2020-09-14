@@ -1,6 +1,6 @@
-# Recipes
+# React-Recipes
 
-![ScreenShot](https://github.com/jixuni/React-Recipe/blob/master/images/screenshot.png)
+![ScreenShot](https://github.com/jixuni/React-Recipes/blob/master/images/screenshot.png)
 
 [Deploy page](https://jixuni.github.io/React-Recipes/)
 

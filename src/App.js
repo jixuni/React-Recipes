@@ -1,30 +1,27 @@
-import React, { Component } from "react";
-import "./App.css";
-import { recipes } from "./tempList";
-import RecipeList from "./components/RecipeList";
-import RecipeDetail from "./components/RecipeDetail";
+import React, { Component } from 'react';
+import './App.css';
+import { recipes } from './tempList';
+import RecipeList from './components/RecipeList';
+import RecipeDetail from './components/RecipeDetail';
 
 class App extends Component {
   state = {
     recipes: recipes,
-    url: `https://www.food2fork.com/api/search?key=${
-      process.env.REACT_APP_RECIPE_KEY
-    }`,
-    base_url: `https://www.food2fork.com/api/search?key=${
-      process.env.REACT_APP_RECIPE_KEY
-    }`,
-    details_id: 35380,
+    url: `https://forkify-api.herokuapp.com/api/search?q=pizza`,
+    base_url: `https://forkify-api.herokuapp.com/api/search?`,
+    details_id: 47746,
     pageIndex: 1,
-    search: "",
-    query: "&q="
+    search: '',
+    query: 'q=',
   };
 
   async getRecipes() {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
+      console.log(this.state);
       this.setState({
-        recipes: jsonData.recipes
+        recipes: jsonData.recipes,
       });
     } catch (error) {
       console.log(error);
@@ -34,7 +31,7 @@ class App extends Component {
   componentDidMount() {
     this.getRecipes();
   }
-  displayPage = index => {
+  displayPage = (index) => {
     switch (index) {
       default:
       case 1:
@@ -57,35 +54,35 @@ class App extends Component {
     }
   };
 
-  handleIndex = index => {
+  handleIndex = (index) => {
     this.setState({
-      pageIndex: index
+      pageIndex: index,
     });
   };
 
   handleDetails = (index, id) => {
     this.setState({
       pageIndex: index,
-      details_id: id
+      details_id: id,
     });
   };
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState(
       {
-        search: e.target.value
+        search: e.target.value,
       },
       () => {
         console.log(this.state.search);
       }
     );
   };
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { base_url, query, search } = this.state;
 
     this.setState(
       () => {
-        return { url: `${base_url}${query}${search}`, search: "" };
+        return { url: `${base_url}${query}${search}`, search: '' };
       },
       () => {
         this.getRecipes();

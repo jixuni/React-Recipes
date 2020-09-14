@@ -6,6 +6,10 @@
 
 Recipes is a simple component base App that grabs recipes from a Api and display the most popular recipes on the page.
 
+# UDPDATE !!!
+
+The Food2Fork recipe has been deprecated, so using another api a developer has created to desplay the data. List of availabel items to search for recipe [search queries](https://forkify-api.herokuapp.com/phrases.html)
+
 ### Installing
 
 Clone repo

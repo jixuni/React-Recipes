@@ -21,7 +21,7 @@ export default class RecipeSearch extends Component {
                   <input
                     type='text'
                     name='search'
-                    placeholder='chicken,onions,carrots'
+                    placeholder='please type search for an ingredient, e.g carrot, chicken, onion'
                     className='form-control'
                     value={value}
                     onChange={handleChange}
